@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="final_output">
+
+                
+    {% with my_variable1="Results : {Results}" %}
+    {% with my_variable2="Conclusion : {Conclusion}" %}
+  
+    {% with my_variable3="Methods : {Methods}" %}
+    {% with my_variable4="Background : {Background}" %}
+  
+    {% with my_variable5="Objective : {Objective}" %}
+  
+  
+    <li>{{my_variable1.format(**output)}}</li>
+    <br>
+    <li>{{my_variable2.format(**output)}}</li>
+    <br>
+    <li>{{my_variable3.format(**output)}}</li>
+    <br>
+    <li>{{my_variable4.format(**output)}}</li>
+    <br>
+    <li>{{my_variable5.format(**output)}}</li> 
+  
+  
+      
+            
+                  
+    {% endwith %}
+    {% endwith %}
+    {% endwith %}
+    {% endwith %}
+    {% endwith %}
+    </div>
+      
+</body>
+
+
+
